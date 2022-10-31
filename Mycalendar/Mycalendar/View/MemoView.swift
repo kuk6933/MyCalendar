@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct MemoView: View {
+    @EnvironmentObject var viewModel: ViewModel
     @State var isShownSheet = false
     
+    //ForEach로 받아오기
     var body: some View {
-        VStack {
-            Button("Memo") {
-                self.isShownSheet.toggle()
+        VStack(alignment: .leading, spacing: 30) {
+            HStack{
+                Spacer()
             }
-            .sheet(isPresented: $isShownSheet) {
-                Text("sheet view")
+            ForEach(viewModel.memoList, id: \.self) { content in
+                Button("📋\(content)") {
+                    self.isShownSheet.toggle()
+                }
+                .sheet(isPresented: $isShownSheet) {
+                    DetailMemoView()
+                }
             }
+            Spacer()
         }
+        .border(.red)
+        .padding(30)
     }
 }
 

@@ -18,6 +18,7 @@
 		A65763C9290F948E00BE2B18 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65763C8290F948E00BE2B18 /* AccountView.swift */; };
 		A65763CF290F9BB100BE2B18 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65763CE290F9BB100BE2B18 /* MemoView.swift */; };
 		A65763D1290F9E9700BE2B18 /* DetailMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65763D0290F9E9700BE2B18 /* DetailMemoView.swift */; };
+		A65763D3290FA93900BE2B18 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65763D2290FA93900BE2B18 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A65763C8290F948E00BE2B18 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		A65763CE290F9BB100BE2B18 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
 		A65763D0290F9E9700BE2B18 /* DetailMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoView.swift; sourceTree = "<group>"; };
+		A65763D2290FA93900BE2B18 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		A65763CB290F96FC00BE2B18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A65763D2290FA93900BE2B18 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65763D3290FA93900BE2B18 /* Model.swift in Sources */,
 				A65763CF290F9BB100BE2B18 /* MemoView.swift in Sources */,
 				A65763C9290F948E00BE2B18 /* AccountView.swift in Sources */,
 				A65763B2290BBAAD00BE2B18 /* CalendarView.swift in Sources */,

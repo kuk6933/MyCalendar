@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MycalendarApp: App {
+    private let viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(viewModel)
         }
     }
 }

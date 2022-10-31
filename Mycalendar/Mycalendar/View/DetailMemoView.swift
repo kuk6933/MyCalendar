@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailMemoView: View {
+    
     var body: some View {
         Text("")
     }
