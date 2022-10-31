@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var selection = 1
+    @State var selection = 2
     var body: some View {
         TabView(selection: $selection) {
-            MainView()
+            CalendarView()
                 .badge(2)
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
@@ -29,6 +29,7 @@ struct MainView: View {
                 }
                 .tag(3)
         }
+        .accentColor(.green)
     }
 }
 
