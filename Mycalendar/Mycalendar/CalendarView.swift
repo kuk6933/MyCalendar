@@ -48,16 +48,4 @@ struct CalendarView: UIViewRepresentable {
         calendar.appearance.headerTitleColor = .black
         // MARK: Todo// 일,토 색깔 커스텀, 다른 뷰들 만들기, 아래 바 만들기
     }
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-        let day = Calendar.current.component(.weekday, from: date) - 1
-        
-        if Calendar.current.shortWeekdaySymbols[day] == "Sun" || Calendar.current.shortWeekdaySymbols[day] == "일" {
-            return .systemRed
-        } else if Calendar.current.shortWeekdaySymbols[day] == "Sat" || Calendar.current.shortWeekdaySymbols[day] == "토" {
-            return .systemBlue
-        } else {
-            return .label
-        }
-    }
 }
-
