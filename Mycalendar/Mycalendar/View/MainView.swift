@@ -14,20 +14,25 @@ struct MainView: View {
             CalendarView()
                 .badge(2)
                 .tabItem {
-                    Label("Calendar", systemImage: "calendar")
+                    Label("캘린더", systemImage: "calendar")
                 }
                 .tag(1)
             ToDoView()
                 .tabItem {
-                    Label("ToDo", systemImage: "pencil")
+                    Label("할일", systemImage: "pencil")
                 }
                 .tag(2)
+            MemoView()
+                .tabItem {
+                    Label("매모", systemImage: "note")
+                }
+                .tag(3)
             AccountView()
                 .badge(1)
                 .tabItem {
-                    Label("Account", systemImage: "person.crop.circle.fill")
+                    Label("계정", systemImage: "person.crop.circle.fill")
                 }
-                .tag(3)
+                .tag(4)
         }
         .accentColor(.green)
     }
