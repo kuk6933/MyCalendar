@@ -12,7 +12,6 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selection) {
             CalendarView()
-                .badge(2)
                 .tabItem {
                     Label("캘린더", systemImage: "calendar")
                 }
@@ -28,7 +27,6 @@ struct MainView: View {
                 }
                 .tag(3)
             AccountView()
-                .badge(1)
                 .tabItem {
                     Label("계정", systemImage: "person.crop.circle.fill")
                 }

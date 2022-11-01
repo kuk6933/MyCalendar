@@ -13,10 +13,7 @@ struct MemoView: View {
     
     //ForEach로 받아오기
     var body: some View {
-        VStack(alignment: .leading, spacing: 30) {
-            HStack{
-                Spacer()
-            }
+        List {
             ForEach(viewModel.memoList, id: \.self) { content in
                 Button("📋\(content)") {
                     self.isShownSheet.toggle()
@@ -25,10 +22,8 @@ struct MemoView: View {
                     DetailMemoView()
                 }
             }
-            Spacer()
         }
-        .border(.red)
-        .padding(30)
+        .padding(10)
     }
 }
 
@@ -37,3 +32,5 @@ struct MemoView_Previews: PreviewProvider {
         MemoView()
     }
 }
+
+//메모는 날짜와는 무관함 
