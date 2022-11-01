@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ToDoView: View {
+    @State var isShownSheet = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack(alignment: .top) {
+                Spacer()
+                Button("➕") {
+                    self.isShownSheet.toggle()
+                }
+                .padding(10)
+            }
+            .sheet(isPresented: $isShownSheet) {
+                ToDoDetailView()
+            }
+            Spacer()
+        }
     }
 }
 

@@ -33,4 +33,4 @@ struct MemoView_Previews: PreviewProvider {
     }
 }
 
-//메모는 날짜와는 무관함 
+//메모는 날짜와는 무관함
