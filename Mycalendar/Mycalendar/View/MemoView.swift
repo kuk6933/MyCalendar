@@ -13,7 +13,7 @@ struct MemoView: View {
     
     //ForEach로 받아오기
     var body: some View {
-        List {
+        VStack(alignment: .leading) {
             ForEach(viewModel.memoList, id: \.self) { content in
                 Button("📋\(content)") {
                     self.isShownSheet.toggle()
@@ -22,8 +22,20 @@ struct MemoView: View {
                     DetailMemoView()
                 }
             }
+            .padding(10)
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: { self.isShownSheet.toggle() }) {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 50))
+                }
+                .padding(20)
+            }
+            .sheet(isPresented: $isShownSheet) {
+                DetailToDoView()
+            }
         }
-        .padding(10)
     }
 }
 

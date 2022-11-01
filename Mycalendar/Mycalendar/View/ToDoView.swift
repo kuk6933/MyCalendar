@@ -12,17 +12,22 @@ struct ToDoView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             HStack(alignment: .top) {
                 Spacer()
-                Button("➕") {
+                Button(action: {
                     self.isShownSheet.toggle()
+                }) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.system(size: 50))
+                    }
                 }
-                .padding(10)
+                .padding(20)
             }
             .sheet(isPresented: $isShownSheet) {
-                ToDoDetailView()
+                DetailToDoView()
             }
-            Spacer()
         }
     }
 }
