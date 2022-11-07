@@ -46,6 +46,6 @@ struct CalendarView: UIViewRepresentable {
         calendar.appearance.todayColor = .systemMint
         //2022년 10월 색깔
         calendar.appearance.headerTitleColor = .black
-        // MARK: Todo// 일,토 색깔 커스텀, 다른 뷰들 만들기, 아래 바 만들기
+
     }
 }

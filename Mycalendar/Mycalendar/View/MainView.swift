@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var selection = 3
+    @State var selection = 4
     var body: some View {
         TabView(selection: $selection) {
             CalendarView()
@@ -26,7 +26,7 @@ struct MainView: View {
                     Label("매모", systemImage: "note")
                 }
                 .tag(3)
-            AccountView()
+            LoginView()
                 .tabItem {
                     Label("계정", systemImage: "person.crop.circle.fill")
                 }
@@ -41,3 +41,5 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+// MARK: Todo// todoView,

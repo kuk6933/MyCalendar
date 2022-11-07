@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct ToDoView: View {
+    @EnvironmentObject var viewModel: ViewModel
     @State var isShownSheet = false
     
     var body: some View {
-        VStack {
-            Spacer()
-            HStack(alignment: .top) {
-                Spacer()
-                Button(action: {
+        VStack(alignment: .leading) {
+            ForEach(viewModel.memoList, id: \.self) { content in
+                Button("📋\(content)") {
                     self.isShownSheet.toggle()
-                }) {
-                    HStack {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.system(size: 50))
-                    }
+                }
+                .sheet(isPresented: $isShownSheet) {
+                    DetailToDoView()
+                }
+            }
+            .padding(10)
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: { self.isShownSheet.toggle() }) {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 50))
                 }
                 .padding(20)
             }

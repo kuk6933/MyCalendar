@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import FSCalendar
 
 struct Model {
     var memoList = ["Memo1", "Memo2", "Memo3", "Memo4", "Memo5"]
-    
+    static let calendar = FSCalendar()
     init() {
         loadMemo()
     }

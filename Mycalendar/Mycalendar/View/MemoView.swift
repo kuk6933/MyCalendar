@@ -11,7 +11,6 @@ struct MemoView: View {
     @EnvironmentObject var viewModel: ViewModel
     @State var isShownSheet = false
     
-    //ForEach로 받아오기
     var body: some View {
         VStack(alignment: .leading) {
             ForEach(viewModel.memoList, id: \.self) { content in
@@ -19,7 +18,7 @@ struct MemoView: View {
                     self.isShownSheet.toggle()
                 }
                 .sheet(isPresented: $isShownSheet) {
-                    DetailMemoView()
+                    DetailMemoView() //메모 내용 호출
                 }
             }
             .padding(10)
@@ -44,5 +43,3 @@ struct MemoView_Previews: PreviewProvider {
         MemoView()
     }
 }
-
-//메모는 날짜와는 무관함

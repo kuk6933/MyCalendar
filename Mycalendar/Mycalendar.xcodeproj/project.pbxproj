@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6514AEA2914E7E30060F746 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6514AE92914E7E30060F746 /* LoginView.swift */; };
+		A6514AEC2914F8900060F746 /* LoginButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6514AEB2914F8900060F746 /* LoginButtonStyle.swift */; };
 		A65763B0290BBAAD00BE2B18 /* MycalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65763AF290BBAAD00BE2B18 /* MycalendarApp.swift */; };
 		A65763B2290BBAAD00BE2B18 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65763B1290BBAAD00BE2B18 /* CalendarView.swift */; };
 		A65763B4290BBAAE00BE2B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65763B3290BBAAE00BE2B18 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6514AE92914E7E30060F746 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A6514AEB2914F8900060F746 /* LoginButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonStyle.swift; sourceTree = "<group>"; };
 		A65763AC290BBAAD00BE2B18 /* Mycalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mycalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65763AF290BBAAD00BE2B18 /* MycalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycalendarApp.swift; sourceTree = "<group>"; };
 		A65763B1290BBAAD00BE2B18 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				A65763CE290F9BB100BE2B18 /* MemoView.swift */,
 				A65763D0290F9E9700BE2B18 /* DetailMemoView.swift */,
 				A65763D82910E01B00BE2B18 /* DetailToDoView.swift */,
+				A6514AE92914E7E30060F746 /* LoginView.swift */,
+				A6514AEB2914F8900060F746 /* LoginButtonStyle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 				A65763D1290F9E9700BE2B18 /* DetailMemoView.swift in Sources */,
 				A65763D92910E01B00BE2B18 /* DetailToDoView.swift in Sources */,
 				A65763C5290F877000BE2B18 /* MainView.swift in Sources */,
+				A6514AEC2914F8900060F746 /* LoginButtonStyle.swift in Sources */,
 				A65763C3290F828600BE2B18 /* ViewModel.swift in Sources */,
+				A6514AEA2914E7E30060F746 /* LoginView.swift in Sources */,
 				A65763B0290BBAAD00BE2B18 /* MycalendarApp.swift in Sources */,
 				A65763C7290F947100BE2B18 /* ToDoView.swift in Sources */,
 			);
