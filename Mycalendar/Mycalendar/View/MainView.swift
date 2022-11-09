@@ -11,26 +11,29 @@ struct MainView: View {
     @State var selection = 4
     var body: some View {
         TabView(selection: $selection) {
-            CalendarView()
-                .tabItem {
-                    Label("캘린더", systemImage: "calendar")
-                }
-                .tag(1)
-            ToDoView()
-                .tabItem {
-                    Label("할일", systemImage: "pencil")
-                }
-                .tag(2)
-            MemoView()
-                .tabItem {
-                    Label("매모", systemImage: "note")
-                }
-                .tag(3)
-            LoginView()
-                .tabItem {
-                    Label("계정", systemImage: "person.crop.circle.fill")
-                }
-                .tag(4)
+            Section{
+                CalendarView()
+                    .tabItem {
+                        Label("캘린더", systemImage: "calendar")
+                    }
+                    .tag(1)
+                ToDoView()
+                    .tabItem {
+                        Label("할일", systemImage: "pencil")
+                    }
+                    .tag(2)
+                MemoView()
+                    .tabItem {
+                        Label("매모", systemImage: "note")
+                    }
+                    .tag(3)
+                LoginView()
+                    .tabItem {
+                        Label("계정", systemImage: "person.crop.circle.fill")
+                    }
+                    .tag(4)
+            }
+            .border(.yellow)
         }
         .accentColor(.green)
     }

@@ -9,7 +9,7 @@ import Foundation
 import FSCalendar
 
 struct Model {
-    var memoList = ["Memo1", "Memo2", "Memo3", "Memo4", "Memo5"]
+    var memoList = ["Memo1", "Memo2", "Memo3", "Memo4", "Memo5","Memo6", "Memo7", "Memo8", "Memo9", "Memo10","Memo1", "Memo2", "Memo3"," Memo1", "Memo2", "Memo3"]
     static let calendar = FSCalendar()
     init() {
         loadMemo()
@@ -17,7 +17,6 @@ struct Model {
     
     func load() -> Data? {
         let fileNm: String = "memo"
-        
         let extensionType = "json"
         
         guard let fileLocation = Bundle.main.url(forResource: fileNm, withExtension: extensionType) else { return nil }

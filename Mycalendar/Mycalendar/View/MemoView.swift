@@ -12,17 +12,18 @@ struct MemoView: View {
     @State var isShownSheet = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            ForEach(viewModel.memoList, id: \.self) { content in
-                Button("📋\(content)") {
-                    self.isShownSheet.toggle()
-                }
-                .sheet(isPresented: $isShownSheet) {
-                    DetailMemoView() //메모 내용 호출
+        VStack {
+            List {
+                ForEach(viewModel.memoList, id: \.self) { content in
+                    Button("📋\(content)") {
+                        self.isShownSheet.toggle()
+                    }
+                    .sheet(isPresented: $isShownSheet) {
+                        DetailMemoView() //메모 내용 호출
+                    }
                 }
             }
-            .padding(10)
-            Spacer()
+            .border(.pink)
             HStack {
                 Spacer()
                 Button(action: { self.isShownSheet.toggle() }) {
@@ -31,15 +32,14 @@ struct MemoView: View {
                 }
                 .padding(20)
             }
-            .sheet(isPresented: $isShownSheet) {
-                DetailToDoView()
-            }
+            .background(.)
         }
     }
-}
 
-struct MemoView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemoView()
-    }
 }
+//
+//struct MemoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MemoView()
+//    }
+//}
