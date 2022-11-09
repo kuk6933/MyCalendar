@@ -25,22 +25,39 @@ struct LoginView: View {
             TextField("비밀번호", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .padding(10)
-            
             Button("로그인") {
                 //
             }
             .buttonStyle(LoginButtonStyle(color: .blue))
-            
             Spacer()
-            Button("카카오톡으로 로그인") {
-                //
+            Button {
+                print("aa")
+            } label: {
+                Label {
+                    Text("카카오로 로그인")
+                } icon: {
+                    Image("kakaoIcon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20, height: 20)
+                        .cornerRadius(10)
+                }
             }
             .buttonStyle(LoginButtonStyle(color: .yellow))
-            Button("네이버로 로그인") {
-                //
+            Button {
+                print("aa")
+            } label: {
+                Label {
+                    Text("네이버로 로그인")
+                } icon: {
+                    Image("naverIcon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20, height: 20)
+                        .cornerRadius(10)
+                }
             }
             .buttonStyle(LoginButtonStyle(color: .green))
-            
             Spacer()
         }
     }
