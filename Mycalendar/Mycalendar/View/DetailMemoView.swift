@@ -24,7 +24,6 @@ struct DetailMemoView: View {
                 .padding(EdgeInsets(top: 10, leading: 5, bottom: 30, trailing: 5))
             Spacer()
         }
-        .border(.green)
         .padding(10)
     }
 }
