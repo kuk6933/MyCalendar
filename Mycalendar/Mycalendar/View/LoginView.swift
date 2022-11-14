@@ -22,7 +22,6 @@ struct LoginView: View {
                     .textFieldStyle(.roundedBorder)
             }
             .padding(5)
-            
             login
             Spacer()
             kakaoLogin
