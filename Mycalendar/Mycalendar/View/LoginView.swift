@@ -14,14 +14,14 @@ struct LoginView: View {
     var body: some View {
         VStack(alignment: .center) {
             HStack() {Spacer()}
-            Label("MyCalendar", systemImage: "star.circle")
-                .padding(20)
-            TextField("이메일", text: $email)
-                .textFieldStyle(.roundedBorder)
-                .padding(10)
-            TextField("비밀번호", text: $password)
-                .textFieldStyle(.roundedBorder)
-                .padding(10)
+            Section{
+                Label("MyCalendar", systemImage: "star.circle")
+                TextField("이메일", text: $email)
+                    .textFieldStyle(.roundedBorder)
+                TextField("비밀번호", text: $password)
+                    .textFieldStyle(.roundedBorder)
+            }
+            .padding(5)
             
             login
             Spacer()
@@ -30,15 +30,13 @@ struct LoginView: View {
             Spacer()
         }
     }
-}
-
-extension LoginView {
     
     var login: some View {
         Button("로그인") {
             //action
         }
         .buttonStyle(LoginButtonStyle(color: .blue))
+        .padding(10)
     }
     var kakaoLogin: some View {
         Button {
