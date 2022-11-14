@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailToDoView: View {
     @State var title = ""
     @State var content = ""
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack{Spacer()}
