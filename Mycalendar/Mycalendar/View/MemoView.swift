@@ -23,16 +23,16 @@ struct MemoView: View {
                     }
                 }
             }
-            .border(.pink)
+            .listStyle(DefaultListStyle())
+            Spacer()
             HStack {
                 Spacer()
                 Button(action: { self.isShownSheet.toggle() }) {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 50))
+                        .padding(5)
                 }
-                .padding(20)
             }
-            .background(.)
         }
     }
 
