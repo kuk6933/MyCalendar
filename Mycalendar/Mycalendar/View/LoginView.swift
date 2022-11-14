@@ -16,17 +16,13 @@ struct LoginView: View {
             HStack() {Spacer()}
             Label("MyCalendar", systemImage: "star.circle")
                 .padding(20)
-            
-            
             TextField("이메일", text: $email)
                 .textFieldStyle(.roundedBorder)
                 .padding(10)
-            
             TextField("비밀번호", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .padding(10)
             Button("로그인") {
-                //
             }
             .buttonStyle(LoginButtonStyle(color: .blue))
             Spacer()

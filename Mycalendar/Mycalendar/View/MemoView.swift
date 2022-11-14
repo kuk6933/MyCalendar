@@ -13,29 +13,32 @@ struct MemoView: View {
     
     var body: some View {
         VStack {
-            List {
-                ForEach(viewModel.memoList, id: \.self) { content in
-                    Button("📋\(content)") {
-                        self.isShownSheet.toggle()
-                    }
-                    .sheet(isPresented: $isShownSheet) {
-                        DetailMemoView() //메모 내용 호출
+            ZStack{
+                List {
+                    ForEach(viewModel.memoList, id: \.self) { content in
+                        Button("📋\(content)") {
+                            self.isShownSheet.toggle()
+                        }
+                        .sheet(isPresented: $isShownSheet) {
+                            DetailMemoView() //메모 내용 호출
+                        }
                     }
                 }
-            }
-            .listStyle(DefaultListStyle())
-            Spacer()
-            HStack {
-                Spacer()
-                Button(action: { self.isShownSheet.toggle() }) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 50))
-                        .padding(5)
+                HStack {
+                    Spacer()
+                    VStack {
+                        Spacer()
+                        Button(action: { self.isShownSheet.toggle() }) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.system(size: 50))
+                                .padding(20)
+                        }
+                    }
                 }
+                .border(.orange)
             }
         }
     }
-
 }
 //
 //struct MemoView_Previews: PreviewProvider {

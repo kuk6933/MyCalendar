@@ -12,27 +12,30 @@ struct ToDoView: View {
     @State var isShownSheet = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            ForEach(viewModel.memoList, id: \.self) { content in
-                Button("📋\(content)") {
-                    self.isShownSheet.toggle()
+        VStack {
+            ZStack{
+                List {
+                    ForEach(viewModel.memoList, id: \.self) { content in
+                        Button("📋\(content)") {
+                            self.isShownSheet.toggle()
+                        }
+                        .sheet(isPresented: $isShownSheet) {
+                            DetailMemoView() //메모 내용 호출
+                        }
+                    }
                 }
-                .sheet(isPresented: $isShownSheet) {
-                    DetailToDoView()
+                HStack {
+                    Spacer()
+                    VStack {
+                        Spacer()
+                        Button(action: { self.isShownSheet.toggle() }) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.system(size: 50))
+                                .padding(20)
+                        }
+                    }
                 }
-            }
-            .padding(10)
-            Spacer()
-            HStack {
-                Spacer()
-                Button(action: { self.isShownSheet.toggle() }) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 50))
-                }
-                .padding(20)
-            }
-            .sheet(isPresented: $isShownSheet) {
-                DetailToDoView()
+                .border(.orange)
             }
         }
     }
