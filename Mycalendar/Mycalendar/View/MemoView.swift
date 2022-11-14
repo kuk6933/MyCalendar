@@ -35,7 +35,6 @@ struct MemoView: View {
                         }
                     }
                 }
-                .border(.orange)
             }
         }
     }
