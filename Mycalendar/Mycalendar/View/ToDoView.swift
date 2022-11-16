@@ -15,12 +15,12 @@ struct ToDoView: View {
         VStack {
             ZStack{
                 List {
-                    ForEach(viewModel.memoList, id: \.self) { content in
-                        Button("📋\(content)") {
+                    ForEach(viewModel.todoList, id: \.self) { content in
+                        Button("✏️\(content)") {
                             self.isShownSheet.toggle()
                         }
                         .sheet(isPresented: $isShownSheet) {
-                            DetailMemoView() //메모 내용 호출
+                            DetailToDoView() //메모 내용 호출
                         }
                     }
                 }
@@ -35,7 +35,6 @@ struct ToDoView: View {
                         }
                     }
                 }
-                .border(.orange)
             }
         }
     }

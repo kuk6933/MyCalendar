@@ -10,7 +10,8 @@ import FSCalendar
 
 struct Model {
     var memoList = ["Memo1", "Memo2", "Memo3", "Memo4", "Memo5","Memo6", "Memo7", "Memo8", "Memo9", "Memo10","Memo1", "Memo2", "Memo3"," Memo1", "Memo2", "Memo3"]
-    static let calendar = FSCalendar()
+    var todoList = ["Todo1", "Todo2", "Todeo3", "Todo4"]
+    
     init() {
         loadMemo()
     }

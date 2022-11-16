@@ -10,10 +10,10 @@ import FSCalendar
 class ViewModel: ObservableObject {
     var model = Model()
     
-    var calendar: FSCalendar {
-        return Model.calendar
-    }
     var memoList: [String] {
         return model.memoList
+    }
+    var todoList: [String] {
+        return model.todoList
     }
 }
