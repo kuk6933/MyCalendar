@@ -17,14 +17,13 @@ struct DetailToDoView: View {
             Section {
                 TextField("제목을 입력하세요", text: $title)
                     .padding(EdgeInsets(top: 0, leading: 5, bottom: 30, trailing: 5))
+                    .textFieldStyle(.roundedBorder)
             }
-            .border(.blue)
-            .underline()
             TextField("내용을 입력하세요", text: $content)
                 .padding(EdgeInsets(top: 10, leading: 5, bottom: 30, trailing: 5))
+                .textFieldStyle(.roundedBorder)
             Spacer()
         }
-        .border(.green)
         .padding(10)
     }
 }
